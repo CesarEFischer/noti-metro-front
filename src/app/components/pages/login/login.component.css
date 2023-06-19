@@ -1,0 +1,38 @@
+.login{
+  background: white;
+  width: 34vw!important;
+  height: 76vh!important;
+  padding: 5vh 10%;
+}
+
+.logo{
+  padding:1rem 0;
+  margin: 0 20%;
+  border: 1px solid black;
+  height: 5rem;
+}
+
+.user{display: flex;
+  flex-direction: column
+}
+.password{
+  display: flex;
+  flex-direction: column;
+}
+.link{
+  height: 1.1rem !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.botones{
+  display: flex;
+  justify-content: space-between;
+  padding-top:1.5rem ;
+}
+
+.register{
+  display: flex;
+  justify-content:space-between;
+  padding: 2rem 18% 0 18%;
+}

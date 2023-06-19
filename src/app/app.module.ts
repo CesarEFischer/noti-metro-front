@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {LoginModule} from "./components/pages/login/login.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { TestCardComponent } from './test-card/test-card.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MenuComponent } from './menu/menu.component';
 import { CardCarouselComponent } from './card-carousel/card-carousel.component';
 import { LinePageSelComponent } from './line-page-sel/line-page-sel.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     NgbModule,
     LoginModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,40 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="z-index: 5; border-bottom: 3px solid;" >
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Notimetro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      
-      </ul>
-      
-      <button type="button" class="btn btn-secondary">Iniciar sesión</button>
-      <button class="btn btn-primary">Registrarse</button>
+<ng-container >
+  <div class="background-login">
 
-    </div>
+     <div class="login">
+
+       <div class="logo">
+
+       </div>
+
+       <form>
+         <div class="user pb-3 pt-4">
+           <label for="user" class="pb-2">Nombre de usuario ó correo electrónico</label>
+           <input pInputText id="user"/>
+         </div>
+
+         <div class="password">
+           <div class="d-flex justify-content-between">
+             <label for="password" class="pb-2">Contraseña</label>
+             <button pButton label="Olvide mi contraseña" class="p-button-link link"></button>
+           </div>
+           <input pInputText  type="password" id="password"/>
+         </div>
+
+         <button pButton label="Iniciar sesión" class="w-100 mt-4"></button>
+
+       </form>
+
+       <div class="register">
+         <span class="link">¿No tiene una cuenta?</span>
+         <button pButton label="Cree una" class="p-button-link link" routerLink="/register"></button>
+       </div>
+
+
+     </div>
+
+
+
   </div>
-</nav>
+</ng-container>
+

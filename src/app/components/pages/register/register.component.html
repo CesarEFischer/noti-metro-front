@@ -1,0 +1,43 @@
+<ng-container >
+  <div class="background-sign-up">
+
+    <div class="sign-up">
+
+      <div class="logo">
+
+      </div>
+
+      <form *ngIf="!exito">
+        <div class="email pb-3 pt-4">
+          <label for="email" class="pb-2" >Correo electrónico</label>
+          <input pInputText id="email" name="email" [(ngModel)]="correo" (change)="verificarCorreo()"/>
+          <span *ngIf="!respCorreo.valor" class="span-error">* {{respCorreo.mensaje}}</span>
+        </div>
+
+        <div class="password">
+          <label for="password" class="pb-2">Contraseña</label>
+          <input pInputText  id="password" name="password" [(ngModel)]="contrasena" (change)="verificarContrasena()"/>
+          <span *ngIf="!respContrasena.valor" class="span-error">* {{respContrasena.mensaje}}</span>
+        </div>
+
+        <button pButton label="Registar" class="w-100 mt-4" [disabled]="!(respContrasena.valor && respCorreo.valor)"
+          (click)="preRegistro()"></button>
+
+      </form>
+
+      <div *ngIf="exito">
+        <h2 class="fw-bolder text-center pt-3">Ya casi esta</h2>
+        <div class="pt-4">
+          Hemos mandado un link de confirmación al correo:
+          <span class="fw-bolder text-center">{{correo}}</span>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+</ng-container>

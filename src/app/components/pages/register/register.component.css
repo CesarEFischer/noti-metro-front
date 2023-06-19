@@ -1,0 +1,27 @@
+.sign-up{
+  background: white;
+  width: 34vw!important;
+  height: 74vh!important;
+  padding: 5vh 10%;
+}
+
+
+.logo{
+  padding:1rem 0;
+  margin: 0 20%;
+  border: 1px solid black;
+  height: 5rem;
+}
+
+.email{display: flex;
+  flex-direction: column
+}
+.password{
+  display: flex;
+  flex-direction: column;
+}
+
+.span-error{
+  color: red;
+  font-size: 12px;
+}
