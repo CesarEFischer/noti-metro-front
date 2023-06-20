@@ -95,6 +95,22 @@ export class AdminService{
         )
     });
   }
+  public getAfluencia( id_estacion: any) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .post(
+          `${this.urlReportes}/getAfluencia`, id_estacion,
+          { 
+            headers: { 'Content-Type': 'application/json' } },
+        )
+        .subscribe(
+          {
+            next: (data) => resolve(data),
+            error: (err) => reject(err)
+          }
+        )
+    });
+  }
 
 
 }

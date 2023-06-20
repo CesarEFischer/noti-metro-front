@@ -273,9 +273,12 @@ selectedReport :any;
   dato:any;
   selectedOption: any; // Variable para almacenar el valor seleccionado
   tipoReporte = 0;
+  id_estacion :any;
+  total_reportes :number=0;
+  tiempo_total:number=0;
 
 
-  constructor(private modalService: NgbModal, private adminService: AdminService,private messageService: MessageService) {}
+  constructor(private modalService: NgbModal, private adminService: AdminService) {}
   openModal(content: any) {
     this.modalService.open(content);
   }
@@ -348,6 +351,25 @@ this.numLinea = numero;
     
 
 
+  }
+  datosAfluencia(){
+    const opcion ={
+      id_estacion:this.selectedOption
+    };
+    
+    this.adminService.getAfluencia(opcion).then((data: any) => {
+      this.tiempo_total=data.data;
+
+      this.modalService.dismissAll;
+      
+      
+     
+    })
+    .catch((error) => {
+      alert('¡Algo ha salido mal!');
+      console.error('Error al verificar la afluencia:', error);
+      this.modalService.dismissAll;
+    });
   }
 
 

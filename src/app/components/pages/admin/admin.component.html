@@ -7,7 +7,7 @@
     <ng-template pTemplate="body" let-admin>
       <tr>
         <td>{{ admin.id }}</td>
-        <td>{{ admin.nombre + admin.apellido_paterno + admin.apellido_materno}}</td>
+        <td>{{ admin.nombre +" "+ admin.apellido_paterno +" "+ admin.apellido_materno}}</td>
         <td>{{ admin.correo }}</td>
         <td>{{admin.fecha_alta | date:'yyyy-MM-dd'}}</td>
 
