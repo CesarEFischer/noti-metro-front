@@ -8,21 +8,14 @@ import {AdminService} from "../../service/admin.service";
 })
 export class LoginComponent implements OnInit{
 
-  constructor(
-    private adminService: AdminService,
-  ) {
-  }
+  private adminService: AdminService | undefined;
 
+  constructor( adminService: AdminService ) {}
 
   async ngOnInit(){
-    const a = (await this.adminService.getAdmins());
-    console.log(a);
+    let a = (await this.adminService?.getAdmins());
+    console.log(`a is... ${a}`);
   }
-
-
-
-
-
 
 
 }

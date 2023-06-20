@@ -7,8 +7,8 @@
 				<h1>
 					Noti-metro
 				</h1>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti mollitia unde nam dicta incidunt voluptatibus impedit temporibus nulla laudantium?</p>
-				<button type="button" class="btn btn-primary">Afluencia</button>
+				<p>¡Bienbenido de vuelta!</p>
+				<h3>{{cur_user}}</h3>
 			</div>
 			<div class="container col">
 				<img src="../../assets/metro.png" alt="">
@@ -21,7 +21,9 @@
 	<section class="container-fluid" >
 		<div class="container text-center" style="z-index: 5;">
 			<h2>Ultimos eventos</h2>
-			<app-card-carousel></app-card-carousel>
+			<p>Aquí tienes los mas recientes reportes de las líneas a las que estás suscrito</p>
+			<!-- <app-card-carousel></app-card-carousel> -->
+			<app-report-table></app-report-table>
 		</div>
 	</section>
 
@@ -33,10 +35,6 @@
 		</div>
 	</section>
 
-	<!-- Always testing -->
-	<section>
-		<app-test-card></app-test-card>
-	</section>
 
 </main>
 <app-footer></app-footer>

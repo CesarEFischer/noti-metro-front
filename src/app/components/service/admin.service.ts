@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
 export class AdminService{
 
   // Despues de "api/" indicaran el nombre del servicio  y en  metodo que petición hace
-  public url = 'http://127.0.0.1:8000/api/admin';
+  public url = 'http://20.163.125.79:8000/api/admin';
 
   constructor(
     private http: HttpClient,
