@@ -1,0 +1,55 @@
+<p-table [value]="adminsData">
+    <ng-template pTemplate="header">
+      <tr>
+        <th *ngFor="let col of cols">{{ col.header }}</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-admin>
+      <tr>
+        <td>{{ admin.id }}</td>
+        <td>{{ admin.nombre + admin.apellido_paterno + admin.apellido_materno}}</td>
+        <td>{{ admin.correo }}</td>
+        <td>{{admin.fecha_alta | date:'yyyy-MM-dd'}}</td>
+
+      </tr>
+    </ng-template>
+  </p-table>
+  <button (click)="openModal(modalContent)">Añadir Nuevo Administrador</button>
+
+<ng-template #modalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Registro de Nuevo Administrador</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="apellidoPaterno">Apellido Paterno</label>
+        <input type="text" class="form-control" id="apellidoPaterno" [(ngModel)]="apellido_paterno" name="apellido_paterno">
+      </div>
+      <div class="form-group">
+        <label for="apellidoMaterno">Apellido Materno</label>
+        <input type="text" class="form-control" id="apellidoMaterno" [(ngModel)]="apellido_materno" name="apellido_materno">
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo</label>
+        <input type="email" class="form-control" id="correo" [(ngModel)]="correo" name="correo">
+      </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña</label>
+        <input type="password" class="form-control" id="contrasena" [(ngModel)]="contrasena" name="contrasena">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="confirmar()">Confirmar</button>
+    <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
+  </div>
+</ng-template>
+

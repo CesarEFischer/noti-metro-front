@@ -1,0 +1,138 @@
+<p>menu works!</p>
+<!-- Metro con boton de afluencia -->
+<section class="container-fuid main">
+    <div class="container text-center row align-items-center">
+        <div class="container col">
+            <h1>
+                Noti-metro
+            </h1>
+            <p>Bienvenido, Por Favor si presenta algún inconveniente con alguna estación elíjala y levante un reporte, o si quiere verificar 
+                su afluencia presione el botón correspondiente
+            </p>
+        </div>
+        <div class="container col">
+            <img src="../../assets/metro.png" alt="">
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Lineas del metro -->
+<section class="container-fluid" style="padding-top: 48px;">
+    <div class="container text-center">
+        <h2>Lineas del metro</h2>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn primary" type="button" data-bs-toggle="collapse" data-bs-target="#linea-1" aria-expanded="false" aria-controls="linea-1"><img src="../../assets/lineas/1/MetroDF_Línea_1.png" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(1);"></button>
+                <p>Observatorio - Pantitlan</p>
+            </div>
+            <div class="col">
+                <button class="btn btn primary" type="button" data-bs-toggle="collapse" data-bs-target="#linea-2" aria-expanded="false" aria-controls="linea-2"><img src="../../assets/lineas/2/MetroDF_Línea_2.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(2);"></button>
+                <p>Cuatro camino - Tasqueña</p>
+            </div>
+            <div class="col">
+                <button class="btn btn primary" type="button" data-bs-toggle="collapse" data-bs-target="#linea-3" aria-expanded="false" aria-controls="linea-3"><img src="../../assets/lineas/3/MetroDF_Línea_3.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(3);"></button>
+                <p>Indios verdes - Universidad</p>
+            </div>
+            <div class="col">
+                <button class="btn btn primary" type="button" data-bs-toggle="collapse" data-bs-target="#linea-4" aria-expanded="false" aria-controls="linea-4"><img src="../../assets/lineas/4/MetroDF_Línea_4.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(4);"></button>
+                <p>Martin carrera - Santa anita</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="../../assets/lineas/5/MetroDF_Línea_5.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(5);">
+                <p>Politécnico - Pantitlan</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/6/MetroDF_Línea_6.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(6);">
+                <p>El rosario - Martin carrera</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/7/MetroDF_Línea_7.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(7);">
+                <p>El rosario - Barranca del muerto</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/8/MetroDF_Línea_8.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(8);">
+                <p>Garibaldi/Lagunilla - Constitución de 1917</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="../../assets/lineas/9/MetroDF_Línea_9.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(9);">
+                <p>Tacubaya - Pantitlan</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/A/MetroDF_Línea_A.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea('A');">
+                <p>Pantitlan - La paz</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/B/MetroDF_Línea_B.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea('B');">
+                <p>Ciudad azteca - Buenavista</p>
+            </div>
+            <div class="col">
+                <img src="../../assets/lineas/12/MetroDF_Línea_12.svg" alt="" [width]="image_size" (click)="openModal(modalContent); valorLinea(12);">
+                <p>Mixcoac - Tláhuac</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #modalContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Linea {{numLinea}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <p>Selecciona Una estación</p>
+        <select name="selectedOption"  [(ngModel)]="selectedOption">
+            <option *ngFor="let dato of obtenerOpcionesPorLinea();" [value]="dato.id">{{ dato.estacion }}</option>
+          </select>
+      </form>
+      <p>¿Qué quieres hacer con esta estación</p>
+        <button type="button" class="btn btn-primary" style="margin-right: 20px;" (click)="openModal(modalContent2);">Reportar</button>
+        <button type="button" class="btn btn-primary" >Verificar afluencia</button>
+
+    </div>
+    <div class="modal-footer">
+      <!--<button type="button" class="btn btn-primary" (click)="confirmar()">Confirmar</button>-->
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #modalContent2 let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Linea {{numLinea}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+            <label for="tiempo">Tiempo (Minutos)</label>
+            <input type="number" class="form-control" id="tiempo" [(ngModel)]="tiempo" name="tiempo">
+          </div>
+      </form>
+      <form>
+        <p>Selecciona Una estación</p>
+        <select name="selectedOption"  [(ngModel)]="selectedReport">
+            <option >Falla tecnica</option>
+            <option >Retraso</option>
+          </select>
+      </form>
+        <button type="button" class="btn btn-primary" style="margin-right: 20px;" (click)="Reportar();">Reportar</button>
+        <button type="button" class="btn btn-primary" >Salir</button>
+
+    </div>
+    <div class="modal-footer">
+      <!--<button type="button" class="btn btn-primary" (click)="confirmar()">Confirmar</button>-->
+      <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Cerrar</button>
+    </div>
+  </ng-template>
+

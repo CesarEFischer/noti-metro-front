@@ -17,6 +17,28 @@ const routes: Routes = [
         (m) => m.RegisterModule
       ),
   },
+  {
+    path: "admin",
+    loadChildren: () =>
+      import("./components/pages/admin/admin.module").then(
+        (m) => m.AdminModule
+      ),
+  },
+  {
+    path: "lineas",
+    loadChildren: () =>
+      import("./components/pages/tableLineas/tableLineas.module").then(
+        (m) => m.TableLineasModule
+      ),
+  },
+  {
+    path: "menu",
+    loadChildren: () =>
+      import("./components/pages/menu/menu.module").then(
+        (m) => m.menuModule
+      ),
+  },
+  
 ];
 
 @NgModule({
