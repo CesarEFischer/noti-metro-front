@@ -364,9 +364,221 @@ export class TableLineasComponent {
       imagen: 'assets/Linea7/sanpedro.png'
     },
     {
-      nombre: 'Polanco',
-      imagen: 'assets/Linea7/polanco.png'
+      nombre: 'Apatlaco',
+      imagen: 'assets/Linea8/apatlaco.png'
     },
+    {
+      nombre: 'Atlalilco',
+      imagen: 'assets/Linea8/atlalilco.png'
+    },
+    {
+      nombre: 'Cerro de la estrella',
+      imagen: 'assets/Linea8/cerroestrella.png'
+    },
+    {
+      nombre: 'Coyuya',
+      imagen: 'assets/Linea8/coyuya.png'
+    },
+    {
+      nombre: 'Doctores',
+      imagen: 'assets/Linea8/doctores.png'
+    },
+    {
+      nombre: 'Escuadrón 201',
+      imagen: 'assets/Linea8/escuadron201.png'
+    },
+    {
+      nombre: 'Garibaldi',
+      imagen: 'assets/Linea8/garibaldi.png'
+    },
+    {
+      nombre: 'Iztacalco',
+      imagen: 'assets/Linea8/iztacalco.png'
+    },
+    {
+      nombre: 'La viga',
+      imagen: 'assets/Linea8/laviga.png'
+    },
+    {
+      nombre: 'Obrera',
+      imagen: 'assets/Linea8/obrera.png'
+    },
+    {
+      nombre: 'San Juan de Letrán',
+      imagen: 'assets/Linea8/sanjuandeletran.png'
+    },
+    {
+      nombre: 'Santa Anita',
+      imagen: 'assets/Linea8/santaanita.png'
+    },
+    {
+      nombre: 'UAM-I',
+      imagen: 'assets/Linea8/uam-i.png'
+    },
+    {
+      nombre: 'Chilpancingo',
+      imagen: 'assets/Linea9/chilpancingo.png'
+    },
+    {
+      nombre: 'Lázaro Cárdenas',
+      imagen: 'assets/Linea9/lazarocardenas.png'
+    },
+    {
+      nombre: 'Mixhiuca',
+      imagen: 'assets/Linea9/mixiuhca.png'
+    },
+    {
+      nombre: 'Patriotismo',
+      imagen: 'assets/Linea9/patriotismo.png'
+    },
+    {
+      nombre: 'Puebla',
+      imagen: 'assets/Linea9/puebla.png'
+    },
+    {
+      nombre: 'Velódromo',
+      imagen: 'assets/Linea9/velodromo.png'
+    },
+    {
+      nombre: 'Santa Marta',
+      imagen: 'assets/LineaA/acatitla.png'
+    },
+    {
+      nombre: 'Agrícola Oriental',
+      imagen: 'assets/LineaA/agricolaote.png'
+    },
+    {
+      nombre: 'Canal de San Juan',
+      imagen: 'assets/LineaA/canalsnjuan.png'
+    },
+    {
+      nombre: 'Guelatao',
+      imagen: 'assets/LineaA/guelatao.png'
+    },
+    {
+      nombre: 'La paz',
+      imagen: 'assets/LineaA/lapaz.png'
+    },
+    {
+      nombre: 'Los reyes',
+      imagen: 'assets/LineaA/losreyes.png'
+    },
+    {
+      nombre: 'Peñon viejo',
+      imagen: 'assets/LineaA/penonviejo.png'
+    },
+    {
+      nombre: 'Tepalcates',
+      imagen: 'assets/LineaA/tepalcates.png'
+    },
+    {
+      nombre: 'Bosques de Aragón',
+      imagen: 'assets/LineaB/bosquearagon.png'
+    },
+    {
+      nombre: 'Buenavista',
+      imagen: 'assets/LineaB/buenavista.png'
+    },
+    {
+      nombre: 'Ciudad Azteca',
+      imagen: 'assets/LineaB/cdazteca.png'
+    },
+    {
+      nombre: 'Deportivo Oceanía',
+      imagen: 'assets/LineaB/depoceanía.png'
+    },
+    {
+      nombre: 'Ricardo Flores Magón',
+      imagen: 'assets/LineaB/floresmagon.png'
+    },
+    {
+      nombre: 'Impulsora',
+      imagen: 'assets/LineaB/impulsora.png'
+    },
+    {
+      nombre: 'Lagunilla',
+      imagen: 'assets/LineaB/lagunilla.png'
+    },
+    {
+      nombre: 'Nezahualcóyotl',
+      imagen: 'assets/LineaB/neza.png'
+    },
+    {
+      nombre: 'Olímpica',
+      imagen: 'assets/LineaB/olimpica.png'
+    },
+    {
+      nombre: 'Plaza Aragón',
+      imagen: 'assets/LineaB/plazaragon.png'
+    },
+    {
+      nombre: 'Romero Rubio',
+      imagen: 'assets/LineaB/romerorubio.png'
+    },
+    {
+      nombre: 'Tepito',
+      imagen: 'assets/LineaB/tepito.png'
+    },
+    {
+      nombre: 'Villa de Aragón',
+      imagen: 'assets/LineaB/VillaAragon.png'
+    },
+    {
+      nombre: 'Hospital 20 de Noviembre',
+      imagen: 'assets/Linea12/20noviembre.png'
+    },
+    {
+      nombre: 'Eje Central',
+      imagen: 'assets/Linea12/ejecentral2.png'
+    },
+    {
+      nombre: 'Insurgentes Sur',
+      imagen: 'assets/Linea12/insurgentessur.png'
+    },
+    {
+      nombre: 'Lomas Estrella',
+      imagen: 'assets/Linea12/lomasestrella.png'
+    },
+    {
+      nombre: 'Mixcoac',
+      imagen: 'assets/Linea12/mixcoac.png'
+    },
+    {
+      nombre: 'Nopalera',
+      imagen: 'assets/Linea12/nopalera2.png'
+    },
+    {
+      nombre: 'Olivos',
+      imagen: 'assets/Linea12/olivos.png'
+    },
+    {
+      nombre: 'Parque de los venados',
+      imagen: 'assets/Linea12/parquevenados2.png'
+    },
+    {
+      nombre: 'Periférico Oriente',
+      imagen: 'assets/Linea12/perifericooriente.png'
+    },
+    {
+      nombre: 'Tezonco',
+      imagen: 'assets/Linea12/tezonco.png'
+    },
+    {
+      nombre: 'Tlaltenco',
+      imagen: 'assets/Linea12/tlaltenco.png'
+    },
+    {
+      nombre: 'Tomatlan',
+      imagen: 'assets/Linea12/tomatlan.png'
+    },
+    {
+      nombre: 'Zapata',
+      imagen: 'assets/Linea12/zapata.png'
+    },
+    {
+      nombre: 'Zapotitlán',
+      imagen: 'assets/Linea12/zapotitlan.png'
+    }
   ];
 
 }
