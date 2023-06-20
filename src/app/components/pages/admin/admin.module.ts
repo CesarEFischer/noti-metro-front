@@ -6,6 +6,7 @@ import {AdminRoutingModule} from "./admin-routing.module";
 import {ButtonModule} from "primeng/button";
 import {TableModule } from 'primeng/table';
 import {InputTextModule} from "primeng/inputtext";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {InputTextModule} from "primeng/inputtext";
     ButtonModule,
     TableModule,
     InputTextModule,
+    FormsModule,
   ],
   providers: [],
   exports: [

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminComponent } from './admin.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AdminComponent', () => {
   let component: AdminComponent;

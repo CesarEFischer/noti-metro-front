@@ -30,5 +30,22 @@ export class AdminService{
     });
   }
 
+  public nuevoAdmin( adminData: any[]) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .post(
+          `${this.url}/nuevoAdmin`, adminData,
+          { 
+            headers: { 'Content-Type': 'application/json' } },
+        )
+        .subscribe(
+          {
+            next: (data) => resolve(data),
+            error: (err) => reject(err)
+          }
+        )
+    });
+  }
+
 
 }
