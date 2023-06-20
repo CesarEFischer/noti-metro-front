@@ -4,17 +4,36 @@
 @import "node_modules/primeng/resources/primeng.min.css";
 @import "node_modules/primeng/resources/primeng.css";
 
+html{
+  font-size: 14px!important;
+}
 
 .background-login{
   background: lightgray;
   height: 100vh!important;
   width: 100vw!important;
-  padding: 12.5vh 33vw!important;
+  padding: 15vh 33vw!important;
 }
 
 .background-sign-up{
   background: lightgray;
   height: 100vh!important;
   width: 100vw!important;
-  padding: 13vh 33vw!important;
+  padding: 16vh 33vw!important;
 }
+
+.background-final-register{
+  background: lightgray;
+  height: 100vh!important;
+  width: 100vw!important;
+  padding: 7.5vh 33vw!important;
+}
+
+.logo {
+  margin: 0 20%;
+  height: 5.5rem;
+}
+.p-password-input{
+  width:100%!important;
+}
+

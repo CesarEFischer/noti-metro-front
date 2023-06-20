@@ -7,6 +7,8 @@ import {LoginModule} from "./components/pages/login/login.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import  {ReporteModule} from "./components/pages/reporte/reporte.module";
+
 
 
 @NgModule({
@@ -18,10 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    LoginModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,43 +1,94 @@
 <ng-container >
-  <div class="background-sign-up">
+  <div class="{{(validacion)? 'background-final-register':'background-sign-up'}}">
 
-    <div class="sign-up">
+    <div class="{{(validacion)? 'final-register':'sign-up'}}">
 
       <div class="logo">
-
+        <img cImg src="../../assets/img/logo.png" alt="logo" class="w-100 h-100">
       </div>
 
-      <form *ngIf="!exito">
-        <div class="email pb-3 pt-4">
-          <label for="email" class="pb-2" >Correo electrónico</label>
-          <input pInputText id="email" name="email" [(ngModel)]="correo" (change)="verificarCorreo()"/>
-          <span *ngIf="!respCorreo.valor" class="span-error">* {{respCorreo.mensaje}}</span>
-        </div>
+      <div *ngIf="preRegistro">
+        <form>
+          <div class="email pb-3 pt-4">
+            <label for="email" class="pb-2" >Correo electrónico</label>
+            <input pInputText id="email" name="email" [(ngModel)]="correo" (change)="verificarCorreo()"/>
+            <span *ngIf="respCorreo.valor" class="span-error">* {{respCorreo.mensaje}}</span>
+          </div>
 
-        <div class="password">
-          <label for="password" class="pb-2">Contraseña</label>
-          <input pInputText  id="password" name="password" [(ngModel)]="contrasena" (change)="verificarContrasena()"/>
-          <span *ngIf="!respContrasena.valor" class="span-error">* {{respContrasena.mensaje}}</span>
-        </div>
+          <div class="password">
+            <label for="password" class="pb-2">Contraseña</label>
+            <input pInputText  id="password" name="password" [(ngModel)]="contrasena" (change)="verificarContrasena()"/>
+            <span *ngIf="respContrasena.valor" class="span-error">* {{respContrasena.mensaje}}</span>
+          </div>
 
-        <button pButton label="Registar" class="w-100 mt-4" [disabled]="!(respContrasena.valor && respCorreo.valor)"
-          (click)="preRegistro()"></button>
+          <button pButton label="Registar" class="w-100 mt-4" (click)="preRegistrar()"
+                  [disabled]="(respContrasena.valor && respCorreo.valor)"
+                  ></button>
 
-      </form>
+        </form>
+      </div>
 
-      <div *ngIf="exito">
-        <h2 class="fw-bolder text-center pt-3">Ya casi esta</h2>
-        <div class="pt-4">
-          Hemos mandado un link de confirmación al correo:
+      <div *ngIf="validar" class="d-flex flex-column justify-content-center">
+        <h2 class="fw-bolder text-center mt-3">Verifica tu correo</h2>
+        <div class="pt-4 w">
+          <span class="text-center w-100"> Ingresa el código que hemos enviado al correo:</span>
           <span class="fw-bolder text-center">{{correo}}</span>
-
-
         </div>
+
+        <input pInputText class="i-cod-ver" [(ngModel)]="codigo" name="codigo">
+
+        <button pButton label="Verificar" class="w-100 mt-4" (click)="validarCodigo()" [disabled]="((codigo == '') && (codigo.length < 6))"></button>
+
+        <button pButton label="Enviar código de nuevo" class="p-button-link link mt-3" (click)="mandarCodigo()"></button>
+
+
       </div>
 
-    </div>
+      <div *ngIf="validacion">
+        <form>
+          <div class="d-flex flex-column pb-3 pt-4">
+            <label for="nombre" class="pb-2" >Nombre(s)</label>
+            <input pInputText id="nombre" name="nombre" [(ngModel)]="nombre" (change)="verificarCorreo()"/>
+            <span *ngIf="nombre == null" class="span-error">* Debes ingresar tu nombre</span>
+          </div>
 
+          <div class="d-flex flex-column pb-3 apellido_paterno">
+            <label for="apellido_paterno" class="pb-2">Apellido paterno</label>
+            <input pInputText  id="apellido_paterno" name="apellido_paterno" [(ngModel)]="apellidoPaterno"/>
+            <span *ngIf="apellidoPaterno == null" class="span-error">* Debes ingresar tu apellido paterno</span>
+          </div>
 
+          <div class="d-flex flex-column apellido_materno">
+            <label for="apellido_materno" class="pb-2">Apellido materno</label>
+            <input pInputText  id="apellido_materno" name="apellido_materno" [(ngModel)]="apellidoMaterno"/>
+            <span *ngIf="apellidoMaterno == null" class="span-error">* Debes ingresar tu apellido materno</span>
+          </div>
 
+          <button pButton label="Agregar rutina" class="p-button-link link mt-3" (click)="mostrarModal = true"></button>
+
+        </form>
+
+        <p-dialog [visible]="mostrarModal" header="Seleccionar rutina" [baseZIndex]="100" [modal]="true" [closable]="true">
+          <span class="pb-4">Selecciona las lineas que ocupes para transportarte en tu día a día</span>
+
+          <div class="mt-3">
+            <li *ngFor="let linea of lineas"  style="list-style: none" class="mb-2">
+              <p-checkbox label="{{linea.label}}" value="{{linea.value}}" name="group_1" [(ngModel)]="rutina" ></p-checkbox>
+            </li>
+          </div>
+
+          <button pButton label="Agregar" class="mt-3" (click)="modalAgregarRutina()" [disabled]="(rutina.length==0)"></button>
+
+        </p-dialog>
+
+        <button pButton label="Concluir registro" class="w-100 mt-4" (click)="registarUsuario()"
+                [disabled]="(rutina.length == 0) || (apellidoPaterno == null) || (apellidoMaterno == null) || (nombre == null) "></button>
+
+        </div>
+
+      </div>
   </div>
+
+  <p-toast key="success" position="top-center" [baseZIndex]="300000"></p-toast>
+
 </ng-container>

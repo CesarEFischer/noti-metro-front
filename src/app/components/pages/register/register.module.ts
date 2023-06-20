@@ -8,6 +8,12 @@ import {ButtonModule} from "primeng/button";
 import {TableModule } from 'primeng/table';
 import {InputTextModule} from "primeng/inputtext";
 import {FormsModule} from "@angular/forms";
+import {RadioButtonModule} from "primeng/radiobutton";
+import {DialogModule} from "primeng/dialog";
+import {CheckboxModule} from "primeng/checkbox";
+import {ToastModule} from "primeng/toast";
+import {ImageModule} from "primeng/image";
+
 
 @NgModule({
   declarations: [
@@ -20,6 +26,11 @@ import {FormsModule} from "@angular/forms";
     TableModule,
     InputTextModule,
     FormsModule,
+    RadioButtonModule,
+    DialogModule,
+    CheckboxModule,
+    ToastModule,
+    ImageModule,
   ],
   providers: [],
   exports: [

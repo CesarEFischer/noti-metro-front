@@ -1,0 +1,104 @@
+<p-dialog [visible]="true" header="Editar rutina" [modal]="true" [style]="{width: 'vw', height: '69vh'}">
+
+  <ng-template pTemplate="body">
+     <div *ngIf="false">
+       <span class="p-float-label mt-2 w-100" >
+          <p-dropdown id="tipo-reporte" styleClass="w-100" [options]="tipoReporte" optionLabel="label" optionValue="value"></p-dropdown>
+          <label for="tipo-reporte">Tipo de reporte</label>
+     </span>
+       <span class="p-float-label m-label w-100">
+        <p-dropdown id="lineas" styleClass="w-100" [options]="lineas" optionLabel="label" optionValue="value"></p-dropdown>
+        <label for="lineas">Linea</label>
+    </span>
+       <span class="p-float-label m-label w-100">
+      <p-dropdown id="estaciones" styleClass="w-100" [options]="estaciones" optionLabel="label" optionValue="value"></p-dropdown>
+      <label for="estaciones">Estación</label>
+   </span>
+       <span class="p-float-label  m-label">
+      <input pInputText id="tiempo" class="w-100"/>
+      <label for="tiempo">Tiempo</label>
+   </span>
+     </div>
+
+     <div *ngIf="false">
+
+       <div class="d-flex justify-content-between">
+         <h6 class="mb-2">Lineas usadas</h6>
+       </div>
+
+       <span class="p-float-label m-label w-100" >
+          <p-dropdown id="linea-1" styleClass="w-100" [options]="lineas" optionLabel="label" optionValue="value"></p-dropdown>
+          <label for="linea-1">Linea usada 1</label>
+       </span>
+
+       <span class="p-float-label m-label w-100" >
+          <p-dropdown id="linea-2" styleClass="w-100" [options]="lineas" optionLabel="label" optionValue="value"></p-dropdown>
+          <label for="linea-2">Linea usada 2</label>
+       </span>
+
+       <div class="d-flex justify-content-end mt-2">
+         <button pButton icon="pi pi-plus" class="p-button-rounded p-button-secondary p-button-text p-button-raised"></button>
+       </div>
+
+
+     </div>
+
+
+    <div>
+
+
+     <div class="d-flex justify-content-between">
+        <span class="p-float-label  m-label">
+          <input pInputText id="nombre-linea" class="w-75"/>
+          <label for="nombre-linea">Nombre</label>
+        </span>
+
+
+       <span class="p-float-label  m-label">
+          <input type="color" id="color" class="w-100"/>
+          <label for="color">Color</label>
+       </span>
+
+     </div>
+
+      <h6 class="mb-2">Activación de notificaciones</h6>
+
+      <div class="d-flex justify-content-between">
+
+         <span class="p-float-label m-label">
+         <input pInputText id="periodo_tiempo" class="w-75 " style="margin-right: 1rem;"/>
+         <label for="periodo_tiempo">Período de consulta(min)</label>
+       </span>
+
+          <span class="p-float-label  m-label">
+          <input pInputText id="no-reportes" class="w-75"/>
+          <label for="no-reportes">No. reportes</label>
+       </span>
+
+      </div>
+
+      <h6 class="mb-2">Estaciones</h6>
+
+      <div class="d-flex justify-content-between">
+          <span class="p-float-label m-label">
+            <input pInputText id="nombre-estacion-1" class="w-100"/>
+            <label for="nombre-estacion-1">Nombre</label>
+          </span>
+         <button pButton label="logo_estacion_1.png" class="p-button-link"></button>
+
+      </div>
+
+      <div class="d-flex justify-content-end mt-2">
+        <button pButton icon="pi pi-plus" class="p-button-rounded p-button-secondary p-button-text p-button-raised"></button>
+      </div>
+
+
+    </div>
+
+  </ng-template>
+  <ng-template pTemplate="footer" style="height: 3rem">
+    <button pButton label="Guardar" styleClass="w-100" style="height: 2.5rem;" (click)="imprimeMensaje()" ></button>
+  </ng-template>
+</p-dialog>
+
+<p-toast key="success" position="top-center" [baseZIndex]="1000"></p-toast>

@@ -1,16 +1,10 @@
 .login{
   background: white;
   width: 34vw!important;
-  height: 76vh!important;
+  height: 70vh!important;
   padding: 5vh 10%;
 }
 
-.logo{
-  padding:1rem 0;
-  margin: 0 20%;
-  border: 1px solid black;
-  height: 5rem;
-}
 
 .user{display: flex;
   flex-direction: column

@@ -30,6 +30,38 @@ export class AdminService{
     });
   }
 
+  public getRol(data:any) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .post(
+          `${this.url}/getRol`,data,
+          { headers: {  } },
+        )
+        .subscribe(
+          {
+            next: (data) => resolve(data),
+            error: (err) => reject(err)
+          }
+        )
+    });
+  }
+
+  public logIn(data:any) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .post(
+          `${this.url}/logIn`,data,
+          { headers: {  } },
+        )
+        .subscribe(
+          {
+            next: (data) => resolve(data),
+            error: (err) => reject(err)
+          }
+        )
+    });
+  }
+
   public nuevoAdmin( adminData: any[]) {
     return new Promise((resolve, reject) => {
       this.http
