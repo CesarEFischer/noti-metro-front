@@ -8,6 +8,7 @@ import {TableModule } from 'primeng/table';
 import {InputTextModule} from "primeng/inputtext";
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     MenuComponent,
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     TableModule,
     InputTextModule,
     FormsModule,
+    
   ],
   providers: [],
   exports: [
