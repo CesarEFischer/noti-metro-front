@@ -7,10 +7,12 @@ import {LoginModule} from "./components/pages/login/login.module";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
