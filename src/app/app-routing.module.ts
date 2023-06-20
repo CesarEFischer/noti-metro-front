@@ -17,6 +17,13 @@ const routes: Routes = [
         (m) => m.RegisterModule
       ),
   },
+  {
+    path: "lineas",
+    loadChildren: () =>
+      import("./components/pages/tableLineas/tableLineas.module").then(
+        (m) => m.TableLineasModule
+      ),
+  },
 ];
 
 @NgModule({

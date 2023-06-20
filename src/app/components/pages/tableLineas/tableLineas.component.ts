@@ -265,39 +265,107 @@ export class TableLineasComponent {
     },
     {
       nombre: 'Aragon',
-      imagen: 'assets/Line5/aragon.png'
+      imagen: 'assets/Linea5/aragon.png'
     },
     {
       nombre: 'Autobuses del norte',
-      imagen: 'assets/Line5/autobusesnorte.png'
+      imagen: 'assets/Linea5/autobusesnorte.png'
     },
     {
       nombre: 'Hangares',
-      imagen: 'assets/Line5/hangares.png'
+      imagen: 'assets/Linea5/hangares.png'
     },
     {
       nombre: 'Instituto del petróleo',
-      imagen: 'assets/Line5/imp.png'
+      imagen: 'assets/Linea5/imp.png'
     },
     {
       nombre: 'Politécnico',
-      imagen: 'assets/Line5/ipn.png'
+      imagen: 'assets/Linea5/ipn.png'
     },
     {
       nombre: 'Misterios',
-      imagen: 'assets/Line5/misterios.png'
+      imagen: 'assets/Linea5/misterios.png'
     },
     {
       nombre: 'Oceanía',
-      imagen: 'assets/Line5/oceania.png'
+      imagen: 'assets/Linea5/oceania.png'
     },
     {
       nombre: 'Valle Gómez',
-      imagen: 'assets/Line5/vallegomez.png'
+      imagen: 'assets/Linea5/vallegomez.png'
     },
     {
-      nombre: '',
-      imagen: 'assets/Line6/.png'
+      nombre: 'Arena Ciudad de México',
+      imagen: 'assets/Linea6/arenacdmexico.png'
+    },
+    {
+      nombre: 'UAM-Azcapotzalco',
+      imagen: 'assets/Linea6/atzcapozalco.png'
+    },
+    {
+      nombre: 'Lindavista',
+      imagen: 'assets/Linea6/lindavista.png'
+    },
+    {
+      nombre: 'Norte 45',
+      imagen: 'assets/Linea6/norte45.png'
+    },
+    {
+      nombre: 'El rosario',
+      imagen: 'assets/Linea6/rosario.png'
+    },
+    {
+      nombre: 'Tezózomoc',
+      imagen: 'assets/Linea6/tezozomoc.png'
+    },
+    {
+      nombre: 'Vallejo',
+      imagen: 'assets/Linea6/vallejo.png'
+    },
+    {
+      nombre: 'Aquiles Serdán',
+      imagen: 'assets/Linea7/aquileserdan.png'
+    },
+    {
+      nombre: 'Auditorio',
+      imagen: 'assets/Linea7/auditorio.png'
+    },
+    {
+      nombre: 'Barranca del muerto',
+      imagen: 'assets/Linea7/barrancadelmuerto.png'
+    },
+    {
+      nombre: 'Camarones',
+      imagen: 'assets/Linea7/camarones.png'
+    },
+    {
+      nombre: 'Mixcoac',
+      imagen: 'assets/Linea7/mixcoac.png'
+    },
+    {
+      nombre: 'Polanco',
+      imagen: 'assets/Linea7/polanco.png'
+    },
+    {
+      nombre: 'Refinería',
+      imagen: 'assets/Linea7/refineria.png'
+    },
+    {
+      nombre: 'Polanco',
+      imagen: 'assets/Linea7/polanco.png'
+    },
+    {
+      nombre: 'San Joaquín',
+      imagen: 'assets/Linea7/sanjoaquim.png'
+    },
+    {
+      nombre: 'San Pedro de los pinos',
+      imagen: 'assets/Linea7/sanpedro.png'
+    },
+    {
+      nombre: 'Polanco',
+      imagen: 'assets/Linea7/polanco.png'
     },
   ];
 
