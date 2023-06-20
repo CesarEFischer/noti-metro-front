@@ -5,20 +5,21 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 
-export class AdminService{
+export class RegisterService{
 
   // Despues de "api/" indicaran el nombre del servicio  y en  metodo que petición hace
-  public url = 'http://127.0.0.1:8000/api/admin';
+  public url = 'http://127.0.0.1:8000/api/usuario';
 
   constructor(
     private http: HttpClient,
   ) {}
 
-  public getAdmins() {
+
+  public logIn(datos: any) {
     return new Promise((resolve, reject) => {
       this.http
-        .get(
-          `${this.url}/getAdmins`,
+        .post(
+          `${this.url}/logIn`, datos,
           { headers: {  } },
         )
         .subscribe(
@@ -29,28 +30,11 @@ export class AdminService{
         )
     });
   }
-
-  public getRol(data:any) {
+  public preRegistrar(datos: any) {
     return new Promise((resolve, reject) => {
       this.http
         .post(
-          `${this.url}/getRol`,data,
-          { headers: {  } },
-        )
-        .subscribe(
-          {
-            next: (data) => resolve(data),
-            error: (err) => reject(err)
-          }
-        )
-    });
-  }
-
-  public logIn(data:any) {
-    return new Promise((resolve, reject) => {
-      this.http
-        .post(
-          `${this.url}/logIn`,data,
+          `${this.url}/preRegistar`, datos,
           { headers: {  } },
         )
         .subscribe(

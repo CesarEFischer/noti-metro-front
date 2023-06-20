@@ -1,16 +1,27 @@
 .sign-up{
   background: white;
   width: 34vw!important;
-  height: 74vh!important;
+  height: 68vh!important;
+  padding:4vh 10%;
+}
+
+.final-register{
+  background: white;
+  width: 34vw!important;
+  height: 90vh!important;
   padding: 5vh 10%;
 }
 
+.registrar{
+  background: white;
+  width: 34vw!important;
+  height: 80vh!important;
+  padding: 5vh 10%;
+}
 
-.logo{
-  padding:1rem 0;
+.logo {
   margin: 0 20%;
-  border: 1px solid black;
-  height: 5rem;
+  height: 5.5rem;
 }
 
 .email{display: flex;
@@ -24,4 +35,14 @@
 .span-error{
   color: red;
   font-size: 12px;
+}
+
+.i-cod-ver{
+  margin: 1rem  25% 0 25%;
+}
+
+.link{
+  height: 1.1rem !important;
+  padding-left: 0;
+  padding-right: 0;
 }

@@ -1,34 +1,35 @@
 import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {LoginComponent} from "./login.component";
-import {LoginRoutingModule} from "./login-routing.module";
+import {ReporteComponent} from "./reporte.component";
+import {ReporteRoutingModule} from "./reporte-routing.module";
+
 import {ButtonModule} from "primeng/button";
 import {TableModule } from 'primeng/table';
 import {InputTextModule} from "primeng/inputtext";
-import {FormsModule} from "@angular/forms";
+import {DropdownModule} from "primeng/dropdown";
+import {DialogModule} from "primeng/dialog";
 import {ToastModule} from "primeng/toast";
-import {PasswordModule} from "primeng/password";
 
 @NgModule({
   declarations: [
-    LoginComponent,
+    ReporteComponent,
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule,
+    ReporteRoutingModule,
     ButtonModule,
     TableModule,
     InputTextModule,
-    FormsModule,
+    DropdownModule,
+    DialogModule,
     ToastModule,
-    PasswordModule,
   ],
   providers: [],
   exports: [
-    LoginComponent,
+    ReporteComponent,
   ],
   bootstrap: []
 })
 
-export class LoginModule { }
+export class ReporteModule { }
