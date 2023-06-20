@@ -1,0 +1,15 @@
+<p-table [value]="lineas">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Nombre de linea</th>
+      <th>Imagen</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-linea>
+    <tr>
+      <td>{{linea.nombre}}</td>
+      <td>
+        <img src="{{linea.imagen}}" alt="Estaciones"></td>
+    </tr>
+  </ng-template>
+</p-table>
