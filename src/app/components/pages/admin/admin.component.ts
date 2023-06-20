@@ -46,7 +46,6 @@ export class AdminComponent{
     this.adminService.getAdmins()
       .then((data: any) => {
         this.adminsData = data.result ? (Array.isArray(data.data) ? data.data : []) : [];
-        console.log('Datos de administradores:', this.adminsData);
       })
       .catch((error) => {
         console.error('Error al obtener los administradores:', error);
@@ -65,7 +64,16 @@ export class AdminComponent{
       correo: this.correo,
       contrasena: this.contrasena
     };
-    this.adminService.nuevoAdmin(adminData as any);
+    this.adminService.nuevoAdmin(adminData as any).then((data: any) => {
+      this.modalService.dismissAll;
+      
+     
+    })
+    .catch((error) => {
+      console.error('Error al obtener Insertar al Usuario:', error);
+      this.modalService.dismissAll;
+    });
+
 
     
 
